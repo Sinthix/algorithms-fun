@@ -83,3 +83,19 @@ for(var i = 0; i< c.length;i+=k){
 	
 }
 console.log(e)
+
+// from a given int check how many divisors we have d%n = 0
+var n = 1012;
+var a = [];
+var digits = 0;
+function findDigits(n){
+    a= n.toString().split("");
+  a.map(function(item){
+    if(n % parseInt(item) == 0){
+    digits++;
+    } 
+  })
+  console.log(digits)
+}
+
+findDigits(n)
