@@ -99,3 +99,20 @@ function findDigits(n){
 }
 
 findDigits(n)
+
+// calculate rounded grades less than 40 is a fail
+var grades = [73,67,38,33]
+var v = 0;
+for(var i = 0;i<grades.length;i++){
+var rounded = Math.ceil(grades[i]/5)*5;
+    if(rounded >40 ){
+    if(rounded - grades[i] < 3){
+      v = rounded;
+    } else {
+      v = grades[i];
+    }
+  } else {
+    v = grades[i];
+  }
+  console.log(v)
+}
