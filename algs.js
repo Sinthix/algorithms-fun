@@ -116,3 +116,17 @@ var rounded = Math.ceil(grades[i]/5)*5;
   }
   console.log(v)
 }
+
+//s: integer, starting point of Sam's house location.
+//t: integer, ending location of Sam's house location.
+//a: integer, location of the Apple tree.
+//b: integer, location of the Orange tree.
+//apples: integer array, distances at which each apple falls from the tree.
+//oranges: integer array, distances at which each orange falls from the tree.
+
+Array.prototype.sum = function (f) {
+        return this.reduce((s, v) => s + f(v), 0);
+    }
+
+    console.log(apples.sum(d => s - a <= d && d <= t - a));
+    console.log(oranges.sum(d => s - b <= d && d <= t - b));
